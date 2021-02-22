@@ -6,7 +6,7 @@ const User = () => {
     return (
         <React.Fragment>
         <div className="info">
-         <h1>User Profile</h1>
+         <h1>User</h1>
         </div>
         <div className="card">
             <div className="card-img">
