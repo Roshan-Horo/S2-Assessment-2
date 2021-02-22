@@ -81,6 +81,9 @@ nav ul li{
 .aside-width{
   width: 15%;
 }
+.current{
+  background-color: #000;
+}
 
 .logo{
   display: flex;
@@ -164,12 +167,12 @@ nav ul li{
 .pie{
   width: 40%;
 }
-.pie-head{
+.pie-head,.line-head{
   background-color: #eeeeee;
   padding: 1rem 1rem;
   border-radius: 5px;
 }
-.pie-body{
+.pie-body,.line-body{
   padding:1rem 0;
 }
 .low{
@@ -178,7 +181,7 @@ nav ul li{
   border-radius: 5px;
 }
 .line{
-  width: 60%;
+  width: 55%;
 }
 
 

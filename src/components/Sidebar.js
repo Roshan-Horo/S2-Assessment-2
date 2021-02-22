@@ -21,7 +21,7 @@ const Sidebar = () => {
         <nav>
 
         <ul>
-        <li><Link class="nav-link" to="/" ><i className="fas fa-chart-line fa-2x"></i><span className={isFullNav?"text-nav show-text":"text-nav"}> Dashboard </span></Link></li>
+        <li><Link class="nav-link current" to="/" ><i className="fas fa-chart-line fa-2x"></i><span className={isFullNav?"text-nav show-text":"text-nav"}> Dashboard </span></Link></li>
         <li><Link  to="/user" class="nav-link"><i className="fas fa-user-circle fa-2x"></i><span className={isFullNav?"text-nav show-text":"text-nav"}>  User</span></Link></li>
         <li><Link class="nav-link" to="/form" ><i className="fas fa-envelope fa-2x"></i> <span className={isFullNav?"text-nav show-text":"text-nav"}> Form</span></Link></li>
         <li><Link class="nav-link" to="/map" ><i className="fas fa-map-marked-alt fa-2x"></i><span className={isFullNav?"text-nav show-text":"text-nav"}> Map</span></Link></li>

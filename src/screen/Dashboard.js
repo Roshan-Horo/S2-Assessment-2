@@ -30,17 +30,17 @@ const Dashboard = () => {
         
     };
 
-    let dataLine = {
+    let dataLine ={
         datasets: [{
-            data: [{
-                x: 10,
-                y: 20
-            }, {
-                x: 15,
-                y: 10
-            }]
+            barPercentage: 0.5,
+            barThickness: 6,
+            maxBarThickness: 8,
+            minBarLength: 2,
+            data: [10, 20, 30, 40, 50, 60, 70]
         }]
     }
+        
+    
 
     return (
         <React.Fragment>
@@ -75,14 +75,14 @@ const Dashboard = () => {
 
             <div className="line-body">
             
-            <line
-            data={dataLine}
-            width={700}
-            height={500}
+            <Bar
+            data={dataPie}
+            width={600}
+            height={350}
             
           />
             </div>
-            <p>updated 3 minutes ago</p>             
+            <p class="low">updated 3 minutes ago</p>             
              </div>
             </div>
         </React.Fragment>
