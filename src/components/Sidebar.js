@@ -1,20 +1,34 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {BrowserRouter, Link} from 'react-router-dom'
+
+
 
 const Sidebar = () => {
+    const [isFullNav,setFullNav] = useState(false)
+
+    const showFullNav = () => {
+        setFullNav(!isFullNav)  
+    }
+
     return (
         <React.Fragment>
-           <aside>
-            <div className="logo">Logo
-     
-            <button>toggle</button>
-        </div>
+        <aside className={isFullNav ? "aside-width": null}>
+            <div className="logo">
+             <p>Logo</p>
+             <button className="right" onClick={showFullNav}><i class={isFullNav?"fas fa-chevron-right fa-2x arrow-reverse": "fas fa-chevron-right fa-2x arrow"}></i></button>
+            </div>
+
         <nav>
+
         <ul>
-         <li><a href="#">Dashboard</a></li>
-               <li><a href="#">User Profile</a></li>
-               <li><a href="#">Form</a></li>
-         <li><a href="#">Map</a></li>
+        <li><Link class="nav-link" to="/" ><i className="fas fa-chart-line fa-2x"></i><span className={isFullNav?"text-nav show-text":"text-nav"}> Dashboard </span></Link></li>
+        <li><Link  to="/user" class="nav-link"><i className="fas fa-user-circle fa-2x"></i><span className={isFullNav?"text-nav show-text":"text-nav"}>  User Profile</span></Link></li>
+        <li><Link class="nav-link" to="/form" ><i className="fas fa-envelope fa-2x"></i> <span className={isFullNav?"text-nav show-text":"text-nav"}> Form</span></Link></li>
+        <li><Link class="nav-link" to="/map" ><i className="fas fa-map-marked-alt fa-2x"></i><span className={isFullNav?"text-nav show-text":"text-nav"}> Map</span></Link></li>
         </ul>
+   
+        
+
        </nav>
        </aside>
   
